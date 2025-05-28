@@ -1,3 +1,5 @@
+inspired by https://github.com/mariosemes/PornHub-downloader-python
+
 # PornHub Link Crawler
 
 # Installation
