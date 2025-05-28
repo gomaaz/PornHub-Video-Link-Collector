@@ -14,15 +14,6 @@ It is designed to help you quickly gather direct video page links (those contain
 - **Batch support:** You can provide a single URL or a batch file with multiple URLs for processing.
 - **Useful for automation:** The collected links in `video_urls.txt` can be directly used with download managers like JDownloader.
 
-## Usage
-
-Run the script via command line. For example, to collect all HD public videos:
-
-```sh
-python3 phdler.py custom "https://www.pornhub.com/video/search?search=public&hd=1"
-```
-You need to make sure that the file `video_urls.txt` is deleted with each run of your process to prevent the file from growing with appended data.
-
 # Installation
 
 Check what version of python you have: python --version <br />
@@ -55,6 +46,17 @@ python3 phdler.py
 It will ask you for your download folder PATH. Please enter your full path without the last backslash. <br />
 Like this: /home/username/media/phmedia <br />
 On first run, phdler will create a database.db which will be used later for everything.
+
+## Usage
+
+Run the script via command line. For example, to collect all HD public videos:
+
+```sh
+python3 phdler.py custom "https://www.pornhub.com/video/search?search=public&hd=1"
+```
+All links will be collected in `video_urls.txt`
+You need to make sure that the file `video_urls.txt` is deleted with each run of your process to prevent the file from growing with appended data.
+
 
 
 PrettyTables <br />
