@@ -21,6 +21,7 @@ Run the script via command line. For example, to collect all HD public videos:
 ```sh
 python3 phdler.py custom "https://www.pornhub.com/video/search?search=public&hd=1"
 ```
+You need to make sure that the file `video_urls.txt` is deleted with each run of your process to prevent the file from growing with appended data.
 
 # Installation
 
