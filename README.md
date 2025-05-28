@@ -39,6 +39,8 @@ docker run -it \
     /bin/bash
 ```
 
+in this container run the following:
+
 ```bash
 apt update && apt upgrade -y       
 apt install python3 nano python3 python3-pip wget curl unzip ffmpeg
