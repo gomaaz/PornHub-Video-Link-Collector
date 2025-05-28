@@ -13,6 +13,17 @@ Check what version of python you have: python --version <br />
 Recommended & tested usage is with python3. <br />
 Also, check if you have pip3 installed (apt install python3-pip). <br />
 
+you can install a docker container first if you like
+```bash
+docker run -it \
+    --cap-add=NET_ADMIN\ 
+    --net=bridge \
+    --name=ph-downloader \
+    -v /your/host/folder:/ph \
+    ubuntu:latest\
+    /bin/bash
+```
+
 ```bash
 apt update && apt upgrade -y       
 apt install python3 nano python3 python3-pip wget curl unzip ffmpeg
