@@ -14,13 +14,15 @@ Recommended & tested usage is with python3. <br />
 Also, check if you have pip3 installed (apt install python3-pip). <br />
 
 ```bash
-1. $ apt install python3
-2. $ apt install python3-pip
-3. $ wget https://github.com/mariosemes/PornHub-downloader-python/archive/master.zip
-4. $ unzip master.zip
-5. $ cd PornHub-downloader-python-master
-6. $ pip3 install -r requirements.txt
-7. $ python3 phdler.py
+apt update && apt upgrade -y       
+apt install python3 nano python3 python3-pip wget curl unzip ffmpeg
+apt install python3-pip
+pip3 install youtube-dl prettytable bs4 requests
+wget https://github.com/mariosemes/PornHub-downloader-python/archive/master.zip
+unzip master.zip
+cd PornHub-downloader-python-master
+pip3 install -r requirements.txt
+python3 phdler.py
 ```
 It will ask you for your download folder PATH. Please enter your full path without the last backslash. <br />
 Like this: /home/username/media/phmedia <br />
