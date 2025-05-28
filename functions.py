@@ -120,16 +120,16 @@ def get_item_name(item_type, url_item):
 ##################################### URL COLLECTION
 
 def extract_video_urls(page_url):
-    """Extract all video URLs from a given page, only those with 'viewkey'."""
+    """Extract all video URLs from a given page (nur viewkey, keine pkey)."""
     try:
         html = request.urlopen(page_url).read().decode('utf8')
         soup = BeautifulSoup(html, 'lxml')
         video_urls = []
-        # Find all video links with 'viewkey'
+        # Find all video links, aber nur mit 'viewkey' und OHNE 'pkey'
         for link in soup.select('a[href*="/view_video.php"]'):
             video_path = link['href']
-            # Nur Links mit 'viewkey' akzeptieren
-            if "/view_video.php" in video_path and "viewkey=" in video_path:
+            # Prüfe: Muss 'viewkey' enthalten, aber nicht 'pkey'
+            if 'viewkey' in video_path and 'pkey' not in video_path:
                 if video_path.startswith('/'):
                     full_url = f"https://www.pornhub.com{video_path}"
                 else:
@@ -139,6 +139,7 @@ def extract_video_urls(page_url):
     except Exception as e:
         print(f"Error extracting videos: {e}")
         return []
+
 
 def extract_all_video_urls(base_url):
     """Iterate through all result pages to collect all video URLs from a listing."""
