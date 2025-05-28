@@ -21,11 +21,10 @@ docker run -it \
 apt update && apt upgrade -y       
 apt install python3 nano python3 python3-pip wget curl unzip ffmpeg
 apt install python3-pip
-pip3 install youtube-dl prettytable bs4 requests
+pip3 install youtube-dl prettytable bs4 requests --break-system-packages
 wget https://github.com/gomaaz/PornHub-downloader-python/archive/master.zip
 unzip master.zip
 cd PornHub-downloader-python-master
-pip3 install -r requirements.txt
 python3 phdler.py
 ```
 It will ask you for your download folder PATH. Please enter your full path without the last backslash. <br />
