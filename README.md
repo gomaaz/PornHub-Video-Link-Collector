@@ -1,6 +1,4 @@
-## deprecated deprecated deprecated deprecated
-
-# PornHub Downloader
+# PornHub Link Crawler
 
 [![GitHub Issues Open](https://github-basic-badges.herokuapp.com/issues/mariosemes/PornHub-downloader-python.svg)]()
 
