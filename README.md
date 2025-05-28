@@ -1,6 +1,26 @@
 inspired by https://github.com/mariosemes/PornHub-downloader-python
 
-# PornHub Link Crawler
+# Pornhub Video Link Collector
+
+This script collects video links from [pornhub.com](https://www.pornhub.com) search and listing pages, and saves them to a file called `video_urls.txt`.
+
+It is designed to help you quickly gather direct video page links (those containing a `viewkey` parameter) across all pages of a search result or video listing, making it easy to feed these links into download tools such as **JDownloader**.
+
+## Features
+
+- **Multi-page scraping:** Automatically iterates through all result pages (using the `?page=` parameter) and collects all matching video links.
+- **Filter by criteria:** Only collects links that match your given search criteria, including support for HD-only results (e.g. `&hd=1`) or any other search parameters.
+- **Viewkey-only links:** Only video links that contain a `viewkey` in their URL are collected, ensuring that only valid, direct video pages are included.
+- **Batch support:** You can provide a single URL or a batch file with multiple URLs for processing.
+- **Useful for automation:** The collected links in `video_urls.txt` can be directly used with download managers like JDownloader.
+
+## Usage
+
+Run the script via command line. For example, to collect all HD public videos:
+
+```sh
+python3 phdler.py custom "https://www.windelhub.com/video/search?search=public&hd=1"
+```
 
 # Installation
 
